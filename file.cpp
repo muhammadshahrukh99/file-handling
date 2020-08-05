@@ -2,26 +2,29 @@
 #include <fstream>
 using namespace std;
 
-int sum(int *p)
-{
-    int i ,s=0;
-    for (int i = 0; i < 10; i++)
-    {
-        s = s + *p;
-        p++;
-    }
-    return s;
-}
 int main()
 {
-    int a[10],i,s;
-    cout<<"Enter 10 Elements";
-    for (int i = 0; i < 10; i++)
+    char a[10];
+    int i, j, count = 0;
+    cin >> a;
+    for (i = 0; a[i] != '\0'; i++)
     {
-        cin>>a[i];
-        s=sum(a);
-        
+        switch (a[i])
+        {
+        case 'a':
+        case 'A':
+        case 'i':
+        case 'I':
+        case 'e':
+        case 'E':
+        case 'o':
+        case 'O':
+        case 'u':
+        case 'U':
+
+        count++;
+        }
     }
-    cout<<"sum  : "<<s;
-    return 0 ; 
+    cout<<"total is : "<<count;
+    return 0 ;
 }
