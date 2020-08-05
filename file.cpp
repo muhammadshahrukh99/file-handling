@@ -4,27 +4,19 @@ using namespace std;
 
 int main()
 {
-    char a[10];
-    int i, j, count = 0;
-    cin >> a;
-    for (i = 0; a[i] != '\0'; i++)
+    char str[200];
+    int w = 0, i = 0;
+    cout << "Enter the sentence : ";
+    cin >> str;
+    for (i = 0; str[i] != '\0'; i++)
     {
-        switch (a[i])
+        if (str[i] != ' ' && str[i] != '\t')
         {
-        case 'a':
-        case 'A':
-        case 'i':
-        case 'I':
-        case 'e':
-        case 'E':
-        case 'o':
-        case 'O':
-        case 'u':
-        case 'U':
-
-        count++;
+            w++;
+            while (str[i] != ' ' && str[i] != '\t')
+                i++;
         }
     }
-    cout<<"total is : "<<count;
-    return 0 ;
+    cout << "Number of Words : " << w;
+    return 0;
 }
