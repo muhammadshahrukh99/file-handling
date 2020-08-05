@@ -1,32 +1,27 @@
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <fstream>
 using namespace std;
-int main(){
 
-int num[10]; 
-int sum=0 ;
-int mul=1;
-float avg;
-for (int i = 0; i < 10; i++)
+int sum(int *p)
 {
-    cin>>num[i];
-
+    int i ,s=0;
+    for (int i = 0; i < 10; i++)
+    {
+        s = s + *p;
+        p++;
+    }
+    return s;
 }
-for (int i = 0; i < 10; i++)
+int main()
 {
-    sum=sum+num[i];
-    
-}
-
-
-for (int i = 0; i < 10; i++)
-{
-    mul=mul*num[i];
-}
-avg=sum/10.0;
-cout<<"sum of numbers : "<<sum<<endl;
-cout<<"Multi of numbers : "<<mul<<endl;
-cout<<"Avg of numbers : "<<avg<<endl;
-
-return 0; 
+    int a[10],i,s;
+    cout<<"Enter 10 Elements";
+    for (int i = 0; i < 10; i++)
+    {
+        cin>>a[i];
+        s=sum(a);
+        
+    }
+    cout<<"sum  : "<<s;
+    return 0 ; 
 }
