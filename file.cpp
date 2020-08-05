@@ -11,7 +11,12 @@ for (int i = 0; i < 10; i++)
     cin>>num[i];
 
 }
-
+for (int i = 0; i < 10; i++)
+{
+    sum=sum+num[i];
+    
+}
+cout<<"sum of numbers"<<sum;
 
 return 0; 
 }
