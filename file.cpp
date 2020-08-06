@@ -4,19 +4,28 @@ using namespace std;
 
 int main()
 {
-    char str[200];
-    int w = 0, i = 0;
-    cout << "Enter the sentence : ";
-    cin >> str;
-    for (i = 0; str[i] != '\0'; i++)
+    int num, count = 0, sum = 0;
+    int average;
+    do
     {
-        if (str[i] != ' ' && str[i] != '\t')
+        cout << " type the  number";
+        cin >> num;
+        if (num > 0)
+
         {
-            w++;
-            while (str[i] != ' ' && str[i] != '\t')
-                i++;
+            sum += num;
+            count++;
         }
+        else if (num < 0)
+        {
+            cout << "Error";
+        }
+
     }
-    cout << "Number of Words : " << w;
-    return 0;
+
+    while (num != 0);
+    cout << " number is zero:";
+    average = sum / count;
+
+    cout << "average is : " << average;
 }
